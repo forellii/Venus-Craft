@@ -4,44 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
-    <link rel="stylesheet" href="events.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        @import url('https://fonts.cdnfonts.com/css/minecraft-3');
 
+        @import url('https://fonts.cdnfonts.com/css/mineplayer');
+
+        p {
+            font-family: mineplayer, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-family: minecraft, sans-serif;
+            color: white;
+        }
+
+        a {
+            color: white;
+            font-family: minecraft, sans-serif;
+        }
+
+        input {
+            font-family: minecraft, sans-serif;
+        }
     </style>
 </head>
 
+
+
 <body>
-    <div class="container">
-        <img class="background" src="lobbyvenus.png" alt="">
-        <img class="possible" src="venusmoon.png" alt="">
-        <img class="photo-1" src="placeholder.png" alt="">
-        <img class="photo-2" src="placeholder.png" alt="">
-        <img class="photo-3" src="placeholder.png" alt="">
-        <div class="ballon">
-            <div class="text-ballon">
-                <p>Eventos</p>
-                <h1> place holder text place holder text place holder text place holder text place holder text place holder text place holder text place holder text</h1>
+    <div class="top">
+        <nav>
+            <a class="ttk" href="https://www.tiktok.com/@forellii"><img class="forimg" src="forellii.png" alt=""></a>
+            <a class="inicio" href="https://venuscraft.xyz/">Inicio</a>
+        </nav>
+    </div>
+    <div class="info">
+        <p class="bemvindo">Bem vindo ao Venusgram!</p>
+        <h1 class="text-info">Aqui você encontra postagens, noticias e <br>acontecimento em nosso servidor!</h1>
+    </div>
+
+
+
+    <div class="posts">
+        <div class="casamento">
+            <div class="like-casam">
+                <div class="like">
+                    <button onclick="count()">❤</button>
+                </div>
+                <div class="LikeCountCasam">
+                    <input id="LikeCountCasam" type="numer" value="0">
+                </div>
             </div>
-        </div>
-        <div class="blurback">
-            <div class="header">
-                <header>
-                    <div class="pages">
-                        <nav>
-                            <ul> <!--Alterar para as paginas do site-->
-                                <a href="https://www.youtube.com/">Sobre</a>
-                                <a href="https://www.youtube.com/">Inicio</a>
-                                <a href="https://www.youtube.com/">Blog</a>
-                                <a href="https://www.youtube.com/">Eventos</a>
-                                <a href="https://www.youtube.com/">Suporte</a>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-            </div>
+            <p class="casamento-tittle">Casamento no servidor!</p>
+            <h1 class="casamento-text">Foram casados em nosso servidor Venus Craft o <br>casal Moises e Lady, com
+                sua
+                cerimonia contando <br>com 12 pessoas, a cerimonia executada pelo <br>padre Forellii, foi um
+                sucesso!
+            </h1>
+            <img class="cmtimg" src="casamento.png" alt="">
         </div>
     </div>
+
+    <script>
+        var LikeCountCasam = document.querySelector('#LikeCountCasam')
+
+        function count() {
+            LikeCountCasam.value = parseInt(LikeCountCasam.value) + 1
+        }
+
+        if (window.innerWidth < 768) {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top: 20%; font-size: 24px;'>Seu dispositivo ainda não é compatível</h1>";
+        }
+    </script>
 </body>
 
 </html>

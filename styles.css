@@ -1,0 +1,184 @@
+body {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0px;
+overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.inicio {
+    padding-left: 505;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: transform 0.5s ease, color 0.5s ease;
+    animation: nav-down 0.8s;
+    padding: 15px;
+    display: flex;
+}
+
+a:hover {
+    transform: scale(1.2);
+    color: yellow;
+    text-decoration: underline;
+}
+
+.info {
+    background-image: url(lago.png);
+    background-size: cover;
+    padding: 100px 40px;
+    border-radius: 20px;
+}
+
+
+.bemvindo {
+    color: rgb(255, 255, 255);
+    font-size: 8vh;
+    animation: fade-up 1s;
+    text-shadow: rgb(0, 0, 0) 6px 6px;
+}
+
+.text-info {
+    color: white;
+    animation: left-enter 1s;
+    font-size: 4vh;
+    text-shadow: rgb(0, 0, 0) 4px 4px;
+}
+
+.forimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    animation: left-enter 1s;
+}
+
+.casamento {                      /*CASAMENTO*/
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+    background-image: url(fogueira.png);
+    background-size: cover;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.casamento-tittle {
+    font-size: 6vh;
+    display: flex;
+    text-shadow: black 4px 4px;
+}
+
+.casamento-text {
+    font-size: 4vh;
+    display: flex;
+    text-shadow: black 4px 4px;
+}
+
+.cmtimg {
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.like-casam {
+    display: flex;
+    transform: translate(50%, 840%);
+}
+
+                                   /*CASAMENTO*/
+.container-postagens {
+    padding-top: 50px;
+}
+
+.posts {
+    background-repeat: no-repeat;
+    padding: 20px 100px;
+    border-top: 30px;
+   
+}
+
+.like {
+    color: rgb(0, 0, 0);
+    width: 70px;
+    height: 70px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+    pointer-events: none;
+    cursor: pointer;
+    text-shadow: black 2px 2px;
+    color: white;
+    display: flex;
+    position: absolute;
+    left: -38%;
+    top: 10%;
+}
+
+button {
+    border: none;
+    left: 5%;
+    display: flex;
+    background: none;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, color 0.1s ease;
+    position: absolute;
+}
+
+button:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+
+
+@keyframes fade-up {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px), scale(0.9);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px), scale(1);
+    }
+}
+
+@keyframes left-enter {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes nav-down {
+    0% {
+        transform: translateY(-60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
