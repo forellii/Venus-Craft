@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VenusGram</title>
+    <title>Venusgram</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1055247351108866089/1328355124858458143/19_Sem_Titulo_20241108100417.png?ex=67ab509d&is=67a9ff1d&hm=60f1e2940dbb16d7730d44dfaea023525510ec38943f6d4d94ba10879349031a&">
     <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.cdnfonts.com/css/minecraft-3');
@@ -69,11 +70,19 @@
     </div>
 
     <script>
-        var LikeCountCasam = document.querySelector('#LikeCountCasam')
+        var LikeCountCasam = document.querySelector('#LikeCountCasam');
+
+        // Recupera o número de likes salvo no localStorage ao carregar a página
+        LikeCountCasam.value = localStorage.getItem('likeCount') || 0;
 
         function count() {
-            LikeCountCasam.value = parseInt(LikeCountCasam.value) + 1
+            // Incrementa o valor
+            LikeCountCasam.value = parseInt(LikeCountCasam.value) + 1;
+
+            // Salva o novo valor no localStorage
+            localStorage.setItem('likeCount', LikeCountCasam.value);
         }
+
 
         if (window.innerWidth < 768) {
             document.body.innerHTML = "<h1 style='text-align:center; margin-top: 20%; font-size: 24px;'>Seu dispositivo ainda não é compatível</h1>";
