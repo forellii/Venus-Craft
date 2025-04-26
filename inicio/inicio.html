@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Venus Craft</title>
+    <link rel="stylesheet" href="estilo_ini.css">
+    <link rel="icon" href="venusicon.ico">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/minecraft-3');
+        @import url('https://fonts.cdnfonts.com/css/minecrafter');
+        @import url('https://fonts.cdnfonts.com/css/mc-ten-lowercase-alt');
+        @import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+        p {
+            font-family: 'minecrafter', sans-serif;
+        }
+
+        h1 {
+            font-family: 'minecraftia', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header">
+                <a href="sobre/sobre.html">Sobre</a>
+                <a href="inicio.html">Inicio</a>
+                <a href="">Regras</a>
+            </div>
+        </nav>
+        <section class="intro">
+            <div class="title_anim">
+                <audio id="buttonsound" src="buttonsound.mp3"></audio>
+                <audio id="achievementsound" src="achievementsound.mp3"></audio>
+                <button id="achievement" class="achievement"
+                    style="font-family: 'MC Ten Lowercase Alt', sans-serif; cursor: pointer;">?</button>
+                <img class="achimg" id="achimg" src="achievement.png" style="opacity: 0;">
+                <img class="icon" src="icon.png" alt="">
+                <img id="season" class="season" src="season3.png" alt="">
+                <p class="pwf">Jogue e se divirta com seus amigos</p>
+                <img class="title" src="venuscrafttitulo.png" alt="">
+                <div class="pfpgrid">
+                    <div class="pfpclass">
+                        <img class="pfp" src="pfpforellii.jpeg" alt="">
+                    </div>
+                    <div class="pfptextclass">
+                        <a class="pfptext" href="https://beacons.ai/forelli" style="color: white; font-family: minecrafter; text-decoration: none;">forellii</a>
+                        <h1>Bem vindo ao site da Venus Craft!</h1>
+                        <h1>eukifiz📍</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="app">
+            <img class="bg2" src="fireplace.png" alt="">
+            <div class="ap">
+                <p>Venha participar de nosso servidor!</p>
+                <h1>Aqui você pode deixar sua imaginação fluir com nosso modo survival, one block e mais em breve... então entre ja!</h1>
+                <a href="https://www.tiktok.com/@forellii"><img class="tiktok" src="tiktok_icon.png" alt="tiktok_icon"></a>
+                <a href=""><img class="discord" src="discord_icon.png" alt="discord_icon"></a>
+            </div>
+            <div class="apimg">
+                <img id="earth" class="earth" src="terra.png" alt="">
+            </div>
+            <div class="changes">
+                <img class="med" src="meditando.png" alt="meditando">
+                <p>Escolha...</p>
+                <img class="diamond" src="diamond.png" alt="diamond">
+                <img class='redstone' src="redstone.png" alt="redstone">
+            </div>
+        </section>
+
+        <script>
+            const achievementsound = document.getElementById("achievementsound");
+            const achievement = document.getElementById("achievement");
+            const achimg = document.getElementById("achimg")
+            const buttonsound = document.getElementById("buttonsound");
+
+            achievement.addEventListener("click", () => {
+                achievementsound.play();
+                achievement.style.display = "none";
+                achimg.classList.remove('achimg');
+                void achimg.offsetWidth;
+                achimg.classList.add('achimg')
+                achimg.style.opacity = 1;
+                setTimeout(function () {
+                    achimg.style.opacity = 0;
+                }, 6000);
+            });
+
+            achievement.addEventListener("mouseenter", () => {
+                buttonsound.currentTime = 0;
+                buttonsound.play();
+            });
+
+            let season = document.getElementById('season') // animate season text by scrolling
+            let lastScrolltop = 0
+
+            window.addEventListener('scroll', function () {
+                let scrolltop = window.pageYOffset || document.documentElement.scrollTop
+
+                if (scrolltop > lastScrolltop) {
+                    season.style.top = '200px'
+                    season.style.opacity = '0'
+                }
+                else {
+                    season.style.top = '320px'
+                    season.style.opacity = '1'
+                }
+
+
+                lastScrolltop = scrolltop <= 0 ? 0 : scrollTop
+            });
+
+        
+
+            //document.body.addEventListener('DOMContentLoaded', function() {
+            // document.documentElement.style.overflow = 'hidden'
+            // document.body.style.overflow = 'hidden'; ;
+            // })
+
+            // document.body.addEventListener('wheel', function(event) {
+            //  window.scrollBy(0, event.deltaY);
+            // });
+        </script>
+
+</body>
+
+</html>
