@@ -3,7 +3,7 @@ body{
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url(index/images/fundoestrelado.png);
+    background-image: url(inicio/images/fundoestrelado.png);
     background-repeat: no-repeat;
     scrollbar-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.2);
 }
