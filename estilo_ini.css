@@ -3,9 +3,8 @@ body{
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url(index/images/fundoestrelado.png);
+    background-image: url(inicio/images/fundoestrelado.png);
     background-repeat: no-repeat;
-    background-position: center;
     scrollbar-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.2);
 }
 
@@ -288,7 +287,7 @@ body{
 .bg2 {
     z-index: -5;
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     filter: brightness(50%);
 }
 
