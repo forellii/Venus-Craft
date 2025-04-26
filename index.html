@@ -24,16 +24,19 @@
 </head>
 
 <body>
-    <img class="backg" src="inicio/images/fundoestrelado.png" alt="">
-    <header>
-        <nav>
-            <div class="header">
-                <a href="inicio/sobre/sobre.html">Sobre</a>
-                <a href="inicio.html">Inicio</a>
-                <a href="">Regras</a>
-            </div>
-        </nav>
-    </header>
+    <div class="indisponibilidade">
+        <p style="color: white; background-color: black;">Ainda indisponivel ;-;</p>
+    </div>
+    <div class="content">
+        <header>
+            <nav>
+                <div class="header">
+                    <a href="inicio/sobre/sobre.html">Sobre</a>
+                    <a href="inicio.html">Inicio</a>
+                    <a href="">Regras</a>
+                </div>
+            </nav>
+        </header>
         <section class="intro">
             <div class="title_anim">
                 <audio id="buttonsound" src="inicio/buttonsound.mp3"></audio>
@@ -50,7 +53,8 @@
                         <img class="pfp" src="inicio/images/pfpforellii.jpeg" alt="">
                     </div>
                     <div class="pfptextclass">
-                        <a class="pfptext" href="https://beacons.ai/forelli" style="color: white; font-family: minecrafter; text-decoration: none;">forellii</a>
+                        <a class="pfptext" href="https://beacons.ai/forelli"
+                            style="color: white; font-family: minecrafter; text-decoration: none;">forellii</a>
                         <h1>Bem vindo ao site da Venus Craft!</h1>
                         <h1>eukifiz📍</h1>
                     </div>
@@ -61,8 +65,10 @@
             <img class="bg2" src="inicio/images/fireplace.png" alt="">
             <div class="ap">
                 <p>Venha participar de nosso servidor!</p>
-                <h1>Aqui você pode deixar sua imaginação fluir com nosso modo survival, one block e mais em breve... então entre ja!</h1>
-                <a href="https://www.tiktok.com/@forellii"><img class="tiktok" src="inicio/images/tiktok_icon.png" alt="tiktok_icon"></a>
+                <h1>Aqui você pode deixar sua imaginação fluir com nosso modo survival, one block e mais em breve...
+                    então entre ja!</h1>
+                <a href="https://www.tiktok.com/@forellii"><img class="tiktok" src="inicio/images/tiktok_icon.png"
+                        alt="tiktok_icon"></a>
                 <a href=""><img class="discord" src="inicio/images/discord_icon.png" alt="discord_icon"></a>
             </div>
             <div class="apimg">
@@ -75,60 +81,60 @@
                 <img class='redstone' src="inicio/images/redstone.png" alt="redstone">
             </div>
         </section>
+    </div>
+    <script>
+        const achievementsound = document.getElementById("achievementsound");
+        const achievement = document.getElementById("achievement");
+        const achimg = document.getElementById("achimg")
+        const buttonsound = document.getElementById("buttonsound");
 
-        <script>
-            const achievementsound = document.getElementById("achievementsound");
-            const achievement = document.getElementById("achievement");
-            const achimg = document.getElementById("achimg")
-            const buttonsound = document.getElementById("buttonsound");
+        achievement.addEventListener("click", () => {
+            achievementsound.play();
+            achievement.style.display = "none";
+            achimg.classList.remove('achimg');
+            void achimg.offsetWidth;
+            achimg.classList.add('achimg')
+            achimg.style.opacity = 1;
+            setTimeout(function () {
+                achimg.style.opacity = 0;
+            }, 6000);
+        });
 
-            achievement.addEventListener("click", () => {
-                achievementsound.play();
-                achievement.style.display = "none";
-                achimg.classList.remove('achimg');
-                void achimg.offsetWidth;
-                achimg.classList.add('achimg')
-                achimg.style.opacity = 1;
-                setTimeout(function () {
-                    achimg.style.opacity = 0;
-                }, 6000);
-            });
+        achievement.addEventListener("mouseenter", () => {
+            buttonsound.currentTime = 0;
+            buttonsound.play();
+        });
 
-            achievement.addEventListener("mouseenter", () => {
-                buttonsound.currentTime = 0;
-                buttonsound.play();
-            });
+        let season = document.getElementById('season') // animate season text by scrolling
+        let lastScrolltop = 0
 
-            let season = document.getElementById('season') // animate season text by scrolling
-            let lastScrolltop = 0
+        window.addEventListener('scroll', function () {
+            let scrolltop = window.pageYOffset || document.documentElement.scrollTop
 
-            window.addEventListener('scroll', function () {
-                let scrolltop = window.pageYOffset || document.documentElement.scrollTop
-
-                if (scrolltop > lastScrolltop) {
-                    season.style.top = '200px'
-                    season.style.opacity = '0'
-                }
-                else {
-                    season.style.top = '320px'
-                    season.style.opacity = '1'
-                }
+            if (scrolltop > lastScrolltop) {
+                season.style.top = '200px'
+                season.style.opacity = '0'
+            }
+            else {
+                season.style.top = '320px'
+                season.style.opacity = '1'
+            }
 
 
-                lastScrolltop = scrolltop <= 0 ? 0 : scrollTop
-            });
+            lastScrolltop = scrolltop <= 0 ? 0 : scrollTop
+        });
 
-        
 
-            //document.body.addEventListener('DOMContentLoaded', function() {
-            // document.documentElement.style.overflow = 'hidden'
-            // document.body.style.overflow = 'hidden'; ;
-            // })
 
-            // document.body.addEventListener('wheel', function(event) {
-            //  window.scrollBy(0, event.deltaY);
-            // });
-        </script>
+        //document.body.addEventListener('DOMContentLoaded', function() {
+        // document.documentElement.style.overflow = 'hidden'
+        // document.body.style.overflow = 'hidden'; ;
+        // })
+
+        // document.body.addEventListener('wheel', function(event) {
+        //  window.scrollBy(0, event.deltaY);
+        // });
+    </script>
 
 </body>
 
